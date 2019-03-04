@@ -8,6 +8,8 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
+//springboot整合servlet方式二
+//springboot整合filter方式二
 @SpringBootApplication
 public class App {
     public static void main(String []args){
@@ -39,4 +41,5 @@ public class App {
         bean.addUrlPatterns("/second");
         return bean;
     }
+
 }
