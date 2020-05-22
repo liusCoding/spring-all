@@ -3,6 +3,7 @@ package com.liuscoding.test;
 import com.liuscoding.bean.Boss;
 import com.liuscoding.bean.Car;
 import com.liuscoding.bean.Color;
+import com.liuscoding.bean.Red;
 import com.liuscoding.config.MainConfigOfAutowired;
 import com.liuscoding.service.BookService;
 import org.junit.Test;
@@ -40,6 +41,9 @@ public class IOCTest_Autowired {
 
         Color color = applicationContext.getBean(Color.class);
         System.out.println(color);
+
+        Red bean = applicationContext.getBean(Red.class);
+        System.out.println(bean);
 
     }
 
