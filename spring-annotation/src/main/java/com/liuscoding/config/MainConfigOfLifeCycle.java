@@ -31,6 +31,12 @@ import org.springframework.context.annotation.Configuration;
  * 3.可以使用JSR250
  *      @PostConstuct: 在bean创建完成并且属性赋值完成，来执行初始化方法
  *      @PreDestroy:  在容器销毁bean之前通知我们进行清理工作
+ *
+ * 4.BeanPostProcessor[interface]:bean 的后置处理器
+ *
+ *      在bean初始化前后进行一些处理工作;
+ *      postProcessBeforeInitialization: 在初始化之前工作
+ *      postProcessAfterInitialization: 在初始化之后工作
  * @author: liusCoding
  */
 @Configuration
