@@ -21,8 +21,9 @@ public class IOCTest_LifeCycle {
         System.out.println("IOC 容器创建完成");
 
 
-        Object car = applicationContext.getBean("car");
+        //Object car = applicationContext.getBean("car");
 
+       // Object cat = applicationContext.getBean("cat");
         //关闭容器
         applicationContext.close();
     }

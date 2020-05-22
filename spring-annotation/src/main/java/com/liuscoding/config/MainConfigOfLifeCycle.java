@@ -2,6 +2,7 @@ package com.liuscoding.config;
 
 import com.liuscoding.bean.Car;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -24,9 +25,12 @@ import org.springframework.context.annotation.Configuration;
  *
  * 1. 指定初始化和销毁方法   init-method="" destroy-method=""
  *      通过@Bean指定  init-method="" 和 destroy-method=""
+ *
+ * 2.通过让Bean 实现 InitializingBean（定义初始化逻辑），DisposableBean（定义销毁逻辑）
  * @author: liusCoding
  */
 @Configuration
+@ComponentScan("com.liuscoding.bean")
 public class MainConfigOfLifeCycle {
 
    // @Scope("prototype")
