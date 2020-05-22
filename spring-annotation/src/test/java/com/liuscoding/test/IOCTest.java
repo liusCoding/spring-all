@@ -28,7 +28,7 @@ public class IOCTest {
     @Test
     public void testComponentScanForMainConfig2(){
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
-
+        System.out.println("容器创建");
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         Stream.of(beanDefinitionNames).forEach(System.out::println);
         Object person = applicationContext.getBean("person");
