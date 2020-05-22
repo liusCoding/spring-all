@@ -2,9 +2,9 @@ package com.liuscoding.service;
 
 import com.liuscoding.dao.BookDao;
 import lombok.ToString;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+
+import javax.inject.Inject;
 
 /**
  * @className: BookService
@@ -16,8 +16,10 @@ import org.springframework.stereotype.Service;
 @ToString
 public class BookService {
 
-    @Autowired(required = false)
-    @Qualifier("bookDao")
+//    @Autowired(required = false)
+//    @Qualifier("bookDao")
+//    @Resource(name = "bookDao2")
+    @Inject
     private BookDao bookDao;
 
 
