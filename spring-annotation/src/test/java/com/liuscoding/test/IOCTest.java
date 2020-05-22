@@ -65,6 +65,15 @@ public class IOCTest {
 
         RainBow rainBow = applicationContext.getBean(RainBow.class);
         System.out.println(bean);
+
+        //工厂bean获取的是调用getObject创建的对象
+        Object colorFactoryBean = applicationContext.getBean("colorFactoryBean");
+        Object colorFactoryBean1 = applicationContext.getBean("colorFactoryBean");
+
+        Object colorFactoryBean2 = applicationContext.getBean("&colorFactoryBean");
+        System.out.println(colorFactoryBean==colorFactoryBean1);
+
+        System.out.println(colorFactoryBean2.getClass());
     }
 
     private void printBeans(AnnotationConfigApplicationContext applicationContext){

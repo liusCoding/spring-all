@@ -1,6 +1,7 @@
 package com.liuscoding.config;
 
 import com.liuscoding.bean.Color;
+import com.liuscoding.bean.ColorFactoryBean;
 import com.liuscoding.bean.Person;
 import com.liuscoding.bean.Red;
 import com.liuscoding.condition.LinuxCondition;
@@ -76,5 +77,16 @@ public class MainConfig2 {
      *   a. @Import(要导入到容器中的组件);容器中就会自动注册这个组件，id默认是全类名
      *   b.ImportSelector： 返回需要导入的组件的全类名数组
      *   c.ImportBeanDefinitionRegistrar： 手动注册bean到容器中
+     *
+     * 4.使用spring 提供的FactoryBean(工厂Bean）
+     *   a.默认获取到的是工厂bean调用的getObject创建的对象
+     *   b.要获取工厂本身，我们需要给id前面加一个&
+     *          &colorFactoryBean
      */
+
+
+    @Bean
+    public ColorFactoryBean colorFactoryBean(){
+        return new ColorFactoryBean();
+    }
 }
