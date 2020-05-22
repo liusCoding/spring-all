@@ -1,5 +1,8 @@
 package com.liuscoding.test;
 
+import com.liuscoding.bean.Boss;
+import com.liuscoding.bean.Car;
+import com.liuscoding.bean.Color;
 import com.liuscoding.config.MainConfigOfAutowired;
 import com.liuscoding.service.BookService;
 import org.junit.Test;
@@ -28,9 +31,15 @@ public class IOCTest_Autowired {
         BookService bookService = applicationContext.getBean(BookService.class);
         System.out.println(bookService);
 
-//        BookDao bookDao = applicationContext.getBean(BookDao.class);
-//        System.out.println(bookDao);
+        Boss boss = applicationContext.getBean(Boss.class);
+        System.out.println(boss);
 
+        Car car = applicationContext.getBean(Car.class);
+
+        System.out.println(car);
+
+        Color color = applicationContext.getBean(Color.class);
+        System.out.println(color);
 
     }
 

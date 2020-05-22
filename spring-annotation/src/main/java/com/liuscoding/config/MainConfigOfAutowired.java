@@ -1,5 +1,7 @@
 package com.liuscoding.config;
 
+import com.liuscoding.bean.Car;
+import com.liuscoding.bean.Color;
 import com.liuscoding.dao.BookDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -50,7 +52,7 @@ import org.springframework.context.annotation.Primary;
  *
  */
 @Configuration
-@ComponentScan({"com.liuscoding.controller","com.liuscoding.service","com.liuscoding.dao"})
+@ComponentScan({"com.liuscoding.controller","com.liuscoding.service","com.liuscoding.dao","com.liuscoding.bean"})
 public class MainConfigOfAutowired {
 
     @Primary
@@ -60,5 +62,12 @@ public class MainConfigOfAutowired {
         bookDao.setLabel("2");
 
         return bookDao;
+    }
+
+    @Bean
+    public Color color(Car car){
+        Color color = new Color();
+        color.setCar(car);
+        return color;
     }
 }
