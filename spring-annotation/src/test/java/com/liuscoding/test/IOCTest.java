@@ -2,6 +2,7 @@ package com.liuscoding.test;
 
 import com.liuscoding.bean.Blue;
 import com.liuscoding.bean.Person;
+import com.liuscoding.bean.RainBow;
 import com.liuscoding.config.MainConfig;
 import com.liuscoding.config.MainConfig2;
 import org.junit.Test;
@@ -61,6 +62,8 @@ public class IOCTest {
         printBeans(applicationContext);
 
         Blue bean = applicationContext.getBean(Blue.class);
+
+        RainBow rainBow = applicationContext.getBean(RainBow.class);
         System.out.println(bean);
     }
 
