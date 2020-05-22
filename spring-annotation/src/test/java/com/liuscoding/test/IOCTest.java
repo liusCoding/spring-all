@@ -1,5 +1,6 @@
 package com.liuscoding.test;
 
+import com.liuscoding.bean.Blue;
 import com.liuscoding.bean.Person;
 import com.liuscoding.config.MainConfig;
 import com.liuscoding.config.MainConfig2;
@@ -58,6 +59,9 @@ public class IOCTest {
     @Test
     public void testForImport(){
         printBeans(applicationContext);
+
+        Blue bean = applicationContext.getBean(Blue.class);
+        System.out.println(bean);
     }
 
     private void printBeans(AnnotationConfigApplicationContext applicationContext){

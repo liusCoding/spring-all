@@ -4,6 +4,7 @@ import com.liuscoding.bean.Color;
 import com.liuscoding.bean.Person;
 import com.liuscoding.bean.Red;
 import com.liuscoding.condition.LinuxCondition;
+import com.liuscoding.condition.MyImportSelector;
 import com.liuscoding.condition.WindowsCondition;
 import org.springframework.context.annotation.*;
 
@@ -18,7 +19,7 @@ import org.springframework.context.annotation.*;
 
 @Configuration
 //@Import导入组件，id默认是组件的全类名
-@Import({Color.class, Red.class})
+@Import({Color.class, Red.class, MyImportSelector.class})
 public class MainConfig2 {
 
     /**
@@ -71,7 +72,7 @@ public class MainConfig2 {
      * 1. 包扫描（@ComponentScan) + 组件标注注解（@Controller+@Service+@Respoistory+@Component)【自定义的类】
      * 2. @Bean 【导入的第三方包里面的组件】
      * 3. @Import 【快速给容器中导入一个组件】
-     *    @Import(要导入到容器中的组件);容器中就会自动注册这个组件，id默认是全类名
-     *
+     *   a. @Import(要导入到容器中的组件);容器中就会自动注册这个组件，id默认是全类名
+     *   b.
      */
 }
