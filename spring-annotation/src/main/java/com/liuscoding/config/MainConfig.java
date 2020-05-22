@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.stereotype.Controller;
 
 /**
  * @Configuration  告诉spring这是一个配置类
@@ -14,13 +13,17 @@ import org.springframework.stereotype.Controller;
  *
  * excludeFilters = Filter[] ：指定扫描的时候按照什么规则排除那些组件
  * includeFilters = Filter[] ：指定扫描的时候只需要那些组件
+ * FilterType.ANNOTATION:按照注解
+ * FilterType.ASSIGNABLE_TYPE：按照指定类型
  * @author: liusCoding
  * @create: 2020-05-22 09:13
  */
 
 @Configuration
 @ComponentScan(basePackages = "com.liuscoding",includeFilters = {
-        @ComponentScan.Filter(type = FilterType.ANNOTATION,classes = {Controller.class})
+//        @ComponentScan.Filter(type = FilterType.ANNOTATION,classes = {Controller.class}),
+//        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,classes = {BookService.class}),
+        @ComponentScan.Filter(type = FilterType.CUSTOM,classes = {MyTypeFilter.class})
 },useDefaultFilters = false)
 
 public class MainConfig {
