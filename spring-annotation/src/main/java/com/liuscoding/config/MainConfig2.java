@@ -1,10 +1,9 @@
 package com.liuscoding.config;
 
 import com.liuscoding.bean.Person;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
+import com.liuscoding.condition.LinuxCondition;
+import com.liuscoding.condition.WindowsCondition;
+import org.springframework.context.annotation.*;
 
 /**
  * @className: MainConfig2
@@ -38,5 +37,25 @@ public class MainConfig2 {
     public Person person(){
         System.out.println("给容器中添加Person");
         return new Person("liuscoidng",20);
+    }
+
+
+    /**
+     * @Conditional : 按照一定的条件进行判断，满足条件给容器注册bean
+     *
+     * 如果系统是windows，给容器注册（"bill"）
+     *
+     * 如果系统是linux，给容器注册（"linus"）
+     */
+    @Bean("bill")
+    @Conditional({WindowsCondition.class})
+    public Person person99(){
+        return new Person("bill Gates",60);
+    }
+
+    @Bean("linus")
+    @Conditional({LinuxCondition.class})
+    public Person person88(){
+        return new Person("linus",50);
     }
 }
