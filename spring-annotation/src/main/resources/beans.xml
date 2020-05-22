@@ -8,6 +8,7 @@
 <!--    包扫描：只要标注了@Controller、@Service、@Repository、@Component注解-->
 <!--    <context:component-scan base-package="com.liuscoding"></context:component-scan>-->
 
+    <context:property-placeholder location="person.properties"></context:property-placeholder>
     <bean id="person" class="com.liuscoding.bean.Person" ><!--init-method="" destroy-method=""-->
         <property name="age" value="18"></property>
         <property name="name" value="zhangsan"></property>
