@@ -7,5 +7,5 @@ package com.liuscoding.bean;
  * @create: 2020-05-22 20:31
  */
 
-public class Yello {
+public class Yellow {
 }
