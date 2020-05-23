@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 public class MyApplicationListener implements ApplicationListener<ApplicationEvent> {
     /**
      * Handle an application event.
+     * 当容器中发布此事件以后，方法触发
      *
      * @param event the event to respond to
      */
