@@ -1,6 +1,5 @@
 package com.liuscoding.test;
 
-import com.liuscoding.bean.Blue;
 import com.liuscoding.ext.ExtConfig;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -17,8 +16,8 @@ public class IOCTest_Ext {
     @Test
     public void testForExt(){
         AnnotationConfigApplicationContext applicationContext  = new AnnotationConfigApplicationContext(ExtConfig.class);
-        Blue blue = applicationContext.getBean(Blue.class);
-        System.out.println(blue);
+
+        applicationContext.close();
     }
 
 

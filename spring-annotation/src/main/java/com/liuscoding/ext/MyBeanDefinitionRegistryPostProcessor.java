@@ -1,6 +1,6 @@
 package com.liuscoding.ext;
 
-import com.liuscoding.bean.Red;
+import com.liuscoding.bean.Blue;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
@@ -28,7 +28,7 @@ public class MyBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegi
         // TODO Auto-generated method stub
         System.out.println("postProcessBeanDefinitionRegistry...bean的数量："+registry.getBeanDefinitionCount());
         //RootBeanDefinition beanDefinition = new RootBeanDefinition(Blue.class);
-        AbstractBeanDefinition beanDefinition = BeanDefinitionBuilder.rootBeanDefinition(Red.class).getBeanDefinition();
+        AbstractBeanDefinition beanDefinition = BeanDefinitionBuilder.rootBeanDefinition(Blue.class).getBeanDefinition();
         BeanDefinitionRegistry registry1 = (BeanDefinitionRegistry) registry;
         registry1.registerBeanDefinition("hello", beanDefinition);
     }
