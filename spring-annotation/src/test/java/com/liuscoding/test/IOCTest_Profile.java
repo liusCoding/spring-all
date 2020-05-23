@@ -20,7 +20,7 @@ public class IOCTest_Profile {
 
     //2.代码的方式激活某种环境
     @Test
-    public void testForPropertyValue(){
+    public void testForProfile(){
         //1.创建ioc容器
        // AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfigOfProfile.class);
 
