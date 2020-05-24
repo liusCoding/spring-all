@@ -18,7 +18,7 @@ public class IOC_TestAOP {
     public void testForAOP(){
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfigOfAop.class);
         MathCalculator bean = applicationContext.getBean(MathCalculator.class);
-        int div = bean.div(1, 0);
+        int div = bean.div(1, 1);
 
         applicationContext.close();
     }
