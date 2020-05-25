@@ -23,6 +23,6 @@ public class MyImportSelector implements ImportSelector {
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
 
 
-        return new String[]{"com.liuscoding.bean.Yello","com.liuscoding.bean.Blue"};
+        return new String[]{"com.liuscoding.bean.Yellow","com.liuscoding.bean.Blue"};
     }
 }
